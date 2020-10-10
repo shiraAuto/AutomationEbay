@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" verbose="1" >
+    <listeners>
+	    	<listener class-name="utilities.ListenerClass"></listener>
+	</listeners>
+    <test name="Sanity Test" >
+         <classes>
+          <class name="tests.FilesAttachmentsTest"/>
+<!--             <class name="tests.ProductSearchTest"/> -->
+      
+          </classes>
+    </test>
+</suite>
