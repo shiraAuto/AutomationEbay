@@ -33,7 +33,7 @@ public class HomePage extends BasePage{
 	public void searchItem(String query) {
 		fillText(searchBar, query);
 		AllureAttachment.attachElementScreenshot(searchBtn);
-		click(noElement);
+		//click(noElement);
 		click(searchBtn);
 		
 	}

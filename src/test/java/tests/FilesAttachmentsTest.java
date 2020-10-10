@@ -33,7 +33,8 @@ public class FilesAttachmentsTest extends BaseTest{
 		public void test02_screenshotAttachment() throws InterruptedException {		
 	        String currentUrl;		
 			currentUrl=driver.getCurrentUrl();
-			softAssert.assertTrue(currentUrl.contains("shira"));
+			//softAssert.assertTrue(currentUrl.contains("shira")); //failure
+			softAssert.assertTrue(currentUrl.contains("ebay")); //pass
 			softAssert.assertAll();
     	}
 			
