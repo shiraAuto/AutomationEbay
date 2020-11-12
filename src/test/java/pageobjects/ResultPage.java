@@ -34,13 +34,24 @@ public class ResultPage extends BasePage{
 	
 	@Step("get result number")
 	public boolean getResultNumber() {
-	   System.out.println(resultNum.getText() + " in the page");
-	   if(resultNum.getText().contains("resultsss for"))
+		String resultTextLine=resultNum.getText();
+	    System.out.println(resultTextLine + " in the page");
+	    if(resultTextLine.contains("result for"))
 	       return true;
-	   else
+	    else
 		   return false;
 	}
-	
+
+	@Step("get result number")
+	public boolean getResultText(String searchText) {
+		String resultTextLine=resultNum.getText();
+		System.out.println(resultTextLine + " in the page");
+		if(resultTextLine.contains(searchText))
+			return true;
+		else
+			return false;
+	}
+
 	@Step("choose control - {0}")
 	public void chooseControl(String control) {		
       List <WebElement> upperControlTabsList = driver.findElements(By.cssSelector(".srp-controls__control>ul>li"));

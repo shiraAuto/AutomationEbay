@@ -30,6 +30,8 @@ public class ProductSearchTest extends BaseTest{
         public void test00_searcItem(String searchText) throws InterruptedException {
             HomePage home = new HomePage(driver);
             home.searchItem(searchText);
+			ResultPage rp = new ResultPage(driver);
+			softAssert.assertTrue(rp.getResultText(searchText));
 
         }
 
