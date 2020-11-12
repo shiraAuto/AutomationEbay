@@ -74,7 +74,9 @@ public class BaseTest {
 	
 	@AfterClass
 	public void tearDown() {
-		driver.quit();
-		Reporter.log("Browser Closed");
+		if(driver != null) {
+			driver.quit();
+			Reporter.log("Browser Closed");
+		}
 	}
 }
